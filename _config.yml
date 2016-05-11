@@ -70,4 +70,4 @@ theme: 386
 deploy:
   type: git
   repo: git@github.com:galenjiang/galenjiang.github.io.git
-  branch: gh-pages
+  branch: master
