@@ -19,6 +19,7 @@ tags: css
 ## vertical-align
 [w3c标准](http://devdocs.io/css/vertical-align)
 
+```vertical-align``` ```bottom```和```top``` 从标准看焉语不详，个人感觉是整个内部其他```vertical-algin```对齐方式先根据自己的基础对齐后，确定```entire line``` ```top```和```bottom```后再做两个对齐/或者说是取出这两个对齐方式中最高的元素，先把这个元素与```entire line```做对齐，之后再短的接上对齐。
 
 ## vertical-algin & line-height
 [w3c标准](http://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/)
