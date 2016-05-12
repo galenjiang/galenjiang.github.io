@@ -130,11 +130,43 @@ var _hmt = _hmt || [];
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
-			<a href="/2016/05/11/hello-world/" >Hello World</a>
+			<a href="/2016/05/12/function-how-far/" >function how far</a>
 		</h3>
 		</div>
 	<div class="col-md-4">
-		<div class="date">post @ 2016-05-11  </div>
+		<div class="date">post @ 2016-05-12  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="最原始的fastClick"><a href="#最原始的fastClick" class="headerlink" title="最原始的fastClick"></a>最原始的fastClick</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>),</span><br><span class="line">    fastClick = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        fastClick = <span class="literal">true</span>;</span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'点击了'</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">oDiv.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(fastClick)&#123;</span><br><span class="line">        fastClick = <span class="literal">false</span>;</span><br><span class="line">        click();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="面向对象方式进行包装"><a href="#面向对象方式进行包装" class="headerlink" title="面向对象方式进行包装"></a>面向对象方式进行包装</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">$</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> oEl = <span class="built_in">document</span>.getElementById(el);</span><br><span class="line">    <span class="keyword">this</span>.fastClick = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$.prototype.add = <span class="function"><span class="keyword">function</span>(<span class="params">type, callback</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">document</span>.addEventListener(type, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.fastClick)&#123;</span><br><span class="line">            <span class="keyword">this</span>.fastClick = <span class="literal">false</span>;</span><br><span class="line">            callback();</span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">this</span>.fastClick = <span class="literal">true</span>;</span><br><span class="line">            &#125;.bind(<span class="keyword">this</span>),<span class="number">1000</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>),<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'点击了'</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> oDiv1 = <span class="keyword">new</span> $(<span class="string">'div1'</span>);</span><br><span class="line">oDiv1.add(<span class="string">'click'</span>,click)</span><br></pre></td></tr></table></figure>
+<h3 id="面向函数版"><a href="#面向函数版" class="headerlink" title="面向函数版"></a>面向函数版</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delay</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> fastClick = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(fastClick)&#123;</span><br><span class="line">            fastClick = <span class="literal">false</span>;</span><br><span class="line">            callback();</span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                fastClick = <span class="literal">true</span>;</span><br><span class="line">            &#125;,<span class="number">1000</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'点击了'</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">oDiv.addEventListener(<span class="string">'click'</span>,delay(click),<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="如何扩展-Promise"><a href="#如何扩展-Promise" class="headerlink" title="如何扩展 Promise"></a>如何扩展 Promise</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> oDiv = <span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delay</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> status = <span class="string">'resolve'</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(status === <span class="string">'pending'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            status = <span class="string">'pending'</span></span><br><span class="line">            callback().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                status = <span class="string">'resolve'</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">click</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'刚点击消息还没回来'</span>)</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'消息：'</span> + msg)</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;,<span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">oDiv.addEventListener(<span class="string">'click'</span>,delay(click.bind(<span class="literal">null</span>,<span class="string">'hello'</span>)),<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="各种畅想"><a href="#各种畅想" class="headerlink" title="各种畅想~"></a>各种畅想~</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">underscore lodash Rxjs</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2016/05/12/function-how-far/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2016/05/12/hello-world/" >Hello World</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2016-05-12  </div>
 		</div>
 	</div>
 	
@@ -156,7 +188,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2016/05/11/hello-world/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2016/05/12/hello-world/#more" class="btn btn-default more">Read More</a>
 </div>
 
 		
@@ -536,17 +568,17 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/es6/">es6<span>2</span></a></li>
+			<li><a href="/tags/css/">css<span>1</span></a></li>
+		
+			<li><a href="/tags/javascript/">javascript<span>5</span></a></li>
 		
 			<li><a href="/tags/others/">others<span>2</span></a></li>
 		
-			<li><a href="/tags/react/">react<span>1</span></a></li>
-		
-			<li><a href="/tags/css/">css<span>1</span></a></li>
-		
-			<li><a href="/tags/javascript/">javascript<span>4</span></a></li>
-		
 			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/es6/">es6<span>2</span></a></li>
+		
+			<li><a href="/tags/react/">react<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -560,7 +592,11 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2016/05/11/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
+        <a href="/2016/05/12/function-how-far/" ><i class="fa fa-file-o"></i>function how far</a>
+      </li>
+    
+      <li>
+        <a href="/2016/05/12/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
       </li>
     
       <li>
@@ -573,10 +609,6 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2016/05/11/git-getting-start/" ><i class="fa fa-file-o"></i>git入门</a>
-      </li>
-    
-      <li>
-        <a href="/2016/05/11/line-height-vertical/" ><i class="fa fa-file-o"></i>line-height&amp;vertical</a>
       </li>
     
   </ul>
