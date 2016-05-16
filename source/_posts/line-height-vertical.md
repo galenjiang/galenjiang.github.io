@@ -20,7 +20,7 @@ tags: css
 ## vertical-align
 [w3c标准](http://devdocs.io/css/vertical-align)
 元素内vertical对齐顺序，分为两类：  
-1. 非top,bottom对齐方式，根据行内框高度，行内文字来进行对齐。
+1. 非top,bottom对齐方式，根据行内框高度，行内文字来进行对齐。  
 2. 对齐后，取top,bottom对齐元素的最大值的元素，来对齐以确定该元素的行框的top或bottom。之后再分别对齐。
 
 ## vertical-algin & line-height
