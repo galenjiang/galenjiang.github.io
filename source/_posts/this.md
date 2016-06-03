@@ -1,5 +1,5 @@
 ---
-title: this
+title: javascript中的this
 date: 2016-06-03 12:25:58
 tags: [javascript]
 ---
@@ -34,7 +34,8 @@ nameObj.waitShowName();
 
 
 
-* 当没有明确的执行时的当前对象时，this指向全局对象window。
+* 当没有明确的执行时的当前对象时，this指向全局对象window。  
+
 ```javascript
             var obj = {
                  bar: "bar",
@@ -49,7 +50,7 @@ nameObj.waitShowName();
 
 
 
-* 在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象通常是是全局对象window，当然也有例外
+* 在浏览器中setTimeout、setInterval和匿名函数执行时的当前对象通常是是全局对象window，当然也有例外  
 
 ```javascript
 
@@ -91,7 +92,6 @@ Bob.showName();    //Bob
 当然还有很多很多例子，
 涉及 new     还有es5中的 call,apply,bind,  以及es6中的() => {}
 
-[slide]
 ```javascript
 
 var obj = {
@@ -134,18 +134,22 @@ lambda表达式：
 
 > 要计算x的平方加2  
 
-```
+```javascript
 (λx.x*x)(λx.x+2)
 ```   
 
-假如用js来写
+假如用js来写  
 
-```
+
+```javascript
 (function(x){ retrun x + 2; })((function(x){ return x*x })(N))
-```
+
+```  
+
 
 es6可以写成  
-```
+```javascript
 (x => x + 2)((x => x * x)(N))
-```
+```  
+
 不一一列举了。
