@@ -1,7 +1,7 @@
 ---
-title: line-height&vertical
-date: 2016-05-11 15:02:41
-tags: css
+title: line-height&vertical好基友关系
+date: 2016-03-18 15:02:41
+tags: [css]
 ---
 ## line-height
 [w3c标准](http://devdocs.io/css/line-height)

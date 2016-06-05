@@ -1,7 +1,7 @@
 ---
 title: git入门
-date: 2016-05-11 15:04:04
-tags: git
+date: 2016-04-3 15:04:04
+tags: [git]
 ---
 ## git bash
 ```

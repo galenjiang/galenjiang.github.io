@@ -1,6 +1,6 @@
 ---
 title: babel 入门
-date: 2016-05-11 15:08:56
+date: 2015-12-11 15:08:56
 tags: [javascript, es6]
 ---
 ## 搭建babel-es2015环境

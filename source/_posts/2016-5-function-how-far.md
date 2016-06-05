@@ -1,8 +1,7 @@
 ---
-title: function how far
+title: 函数离我们多远
 date: 2016-05-12T09:46:54.000Z
-tags:
-  - javascript
+tags: [javascript]
 ---
 
 # 最原始的fastClick

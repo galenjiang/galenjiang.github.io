@@ -1,6 +1,6 @@
 ---
 title: React入门
-date: 2016-05-11 14:57:43
+date: 2015-11-11 14:57:43
 tags: [javascript,react]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: es6模块
-date: 2016-05-11 15:05:00
+date: 2015-10-21 15:05:00
 tags: [javascript,es6]
 ---
 # es6 Module
