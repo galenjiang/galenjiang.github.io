@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>第 5 页 | Home</title>
+  <meta name="author" content="galenjiang">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Home"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Home</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>Home<span class="blink-fast">∎</span></h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+      <i class="fa fa-heart blink-slow"></i>
+      No pay no gain.
+</div>    
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2015/09/07/2015-9-dom-custom-event/" >DOM 自定义事件，观察者模式</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2015-09-07  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="http://www.zhangxinxu.com/wordpress/2012/04/js-dom%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6/" target="_blank" rel="external">漫谈js自定义事件、DOM/伪DOM自定义事件</a></p>
+<p>一部分代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(function() &#123;</span><br><span class="line">  var div1 = document.getElementById(&quot;div1&quot;);</span><br><span class="line">  div1.addEventListener(&quot;todo&quot;, function() &#123;</span><br><span class="line">    alert(&quot;todo&quot;)</span><br><span class="line">  &#125;);</span><br><span class="line">  // 创建</span><br><span class="line">  var evt = document.createEvent(&quot;HTMLEvents&quot;);</span><br><span class="line">  // 初始化</span><br><span class="line">  evt.initEvent(&quot;todo&quot;, false, false);</span><br><span class="line">  // 触发, 即弹出文字</span><br><span class="line">  div1.dispatchEvent(evt);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+	
+	</div>
+  <a type="button" href="/2015/09/07/2015-9-dom-custom-event/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2015/09/05/2015-9-sass-getting-start/" >sass入门</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2015-09-05  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="选择器嵌套："><a href="#选择器嵌套：" class="headerlink" title="选择器嵌套："></a>选择器嵌套：</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a&#123;</span><br><span class="line">    color: red;</span><br><span class="line">        header &amp; &#123;</span><br><span class="line">        color: green;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="属性嵌套："><a href="#属性嵌套：" class="headerlink" title="属性嵌套："></a>属性嵌套：</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>: &#123;</span><br><span class="line">        top: <span class="number">1px</span> solid red;</span><br><span class="line">        <span class="attribute">bottom</span>: <span class="number">1px</span> solid green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="伪类嵌套："><a href="#伪类嵌套：" class="headerlink" title="伪类嵌套："></a>伪类嵌套：</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.clearfix&#123;</span><br><span class="line">    &amp;:after&#123;</span><br><span class="line">        content: "";</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="简单混合宏"><a href="#简单混合宏" class="headerlink" title="简单混合宏"></a>简单混合宏</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@mixin display($type: flex)&#123;</span><br><span class="line">    display: -webkit-$type;</span><br><span class="line">    display: $type;</span><br><span class="line">&#125;</span><br><span class="line">//引用</span><br><span class="line">div&#123;</span><br><span class="line">    @include display(flex);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="不定参宏"><a href="#不定参宏" class="headerlink" title="不定参宏"></a>不定参宏</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@mixin box-shadow($shadows...)&#123;</span><br><span class="line">  @if length($shadows) &gt;= 1 &#123;</span><br><span class="line">    -webkit-box-shadow: $shadows;</span><br><span class="line">    box-shadow: $shadows;</span><br><span class="line">  &#125; @else &#123;</span><br><span class="line">    $shadows: 0 0 2px rgba(#000,.25);</span><br><span class="line">    -webkit-box-shadow: $shadow;</span><br><span class="line">    box-shadow: $shadow;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@extend</span><br><span class="line">.btn1 &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">.btn2&#123;</span><br><span class="line">    background: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="占位符"><a href="#占位符" class="headerlink" title="%占位符"></a>%占位符</h2><p>不会被编译到css<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%<span class="selector-tag">mt5</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>混合宏会造成代码冗余，但可以传参；继承能合并代码，但不能传参</p>
+<h2 id="插值表达式"><a href="#插值表达式" class="headerlink" title="插值表达式"></a>插值表达式</h2><p>只能用于@extend或者普通作用域中。（插入 <figure class="highlight plain"><figcaption><span>和 ```%placeholder```）</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```css</span><br><span class="line">$properties: (margin, padding);</span><br><span class="line">@mixin set-value($side, $value) &#123;</span><br><span class="line">    @each $prop in $properties &#123;</span><br><span class="line">        #&#123;$prop&#125;-#&#123;$side&#125;: $value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.login-box &#123;</span><br><span class="line">    @include set-value(top, 14px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>举个栗子2<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">%updated-status &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">    background: #F00;</span><br><span class="line">&#125;</span><br><span class="line">.selected-status &#123;</span><br><span class="line">    font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line">$flag: "status";</span><br><span class="line">.navigation &#123;</span><br><span class="line">    @extend %updated-#&#123;$flag&#125;;</span><br><span class="line">    @extend .selected-#&#123;$flag&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"url"</span>引用</span><br></pre></td></tr></table></figure>
+
+	
+	</div>
+  <a type="button" href="/2015/09/05/2015-9-sass-getting-start/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2015/09/03/2015-9-how-to-prevent-repeating-send-ajax/" >怎样防止重复发送 Ajax 请求？</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2015-09-03  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<blockquote>
+<p>作者：长天之云<br><a href="https://www.zhihu.com/question/19805411/answer/15465427" target="_blank" rel="external">链接,知乎</a></p>
+</blockquote>
+<p>不推荐用外部变量锁定或修改按钮状态的方式，因为那样比较难：<br>要考虑并理解 success, complete, error, timeout 这些事件的区别，并注册正确的事件，一旦失误，功能将不再可用；<br>不可避免地比普通流程要要多注册一个 complete 事件；<br>恢复状态的代码很容易和不相干的代码混合在一起；</p>
+<p>我推荐用主动查询状态的方式（A、B，jQuery 为例）或工具函数的方式（C、D）来去除重复操作，并提供一些例子作为参考：</p>
+<h2 id="A-独占型提交"><a href="#A-独占型提交" class="headerlink" title="A. 独占型提交"></a>A. 独占型提交</h2><p>只允许同时存在一次提交操作，并且直到本次提交完成才能进行下一次提交。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.submit = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.promise_.state() === <span class="string">'pending'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.promise_ = $.post(<span class="string">'/api/save'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="B-贪婪型提交"><a href="#B-贪婪型提交" class="headerlink" title="B. 贪婪型提交"></a>B. 贪婪型提交</h2><p>无限制的提交，但是以最后一次操作为准；亦即需要尽快给出最后一次操作的反馈，而前面的操作结果并不重要。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.submit = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.promise_.state() === <span class="string">'pending'</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.promise_.abort()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// todo</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>比如某些应用的条目中，有一些进行类似「喜欢」或「不喜欢」操作的二态按钮。如果按下后不立即给出反馈，用户的目光焦点就可能在那个按钮上停顿许久；如果按下时即时切换按钮的状态，再在程序上用 abort 来实现积极的提交，这样既能提高用户体验，还能降低服务器压力，皆大欢喜。</p>
+<hr>
+<h2 id="C-节制型提交"><a href="#C-节制型提交" class="headerlink" title="C. 节制型提交"></a>C. 节制型提交</h2><p>无论提交如何频繁，任意两次有效提交的间隔时间必定会大于或等于某一时间间隔；即以一定频率提交。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.submit = throttle(<span class="number">150</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// todo</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>如果客户发送每隔100毫秒发送过来10次请求，此模块将只接收其中6个（每个在时间线上距离为150毫秒）进行处理。<br>这也是解决查询冲突的一种可选手段，比如以知乎草稿举例，仔细观察可以发现：<br>编辑器的 blur 事件会立即触发保存；<br>保存按钮的 click 事件也会立即触发保存；<br>但是存在一种情况会使这两个事件在数毫秒内连续发生——当焦点在编辑器内部，并且直接去点击保存按钮——这时用 throttle 来处理是可行的。<br>另外还有一些事件处理会很频繁地使用 throttle，如： resize、scroll、mousemove。</p>
+<hr>
+<h2 id="D-懒惰型提交"><a href="#D-懒惰型提交" class="headerlink" title="D. 懒惰型提交"></a>D. 懒惰型提交</h2><p>任意两次提交的间隔时间，必须大于一个指定时间，才会促成有效提交；即不给休息不干活。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.submit = debounce(<span class="number">150</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// todo</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>还是以知乎草稿举例，当在编辑器内按下 ctrl + s 时，可以手动保存草稿；如果你连按，程序会表示不理解为什么你要连按，只有等你放弃连按，它才会继续。</p>
+<hr>
+<p>更多记忆中的例子</p>
+<p>方式 C 和 方式 D 有时更加通用，比如这些情况：<br>游戏中你捡到一把威力强大的高速武器，为了防止你的子弹在屏幕上打成一条直线，可以 throttle 来控制频率；<br>在弹幕型游戏里，为了防止你把射击键夹住来进行无脑游戏，可以用 debounce 来控制频率；<br>在编译任务里，守护进程监视了某一文件夹里所有的文件（如任一文件的改变都可以触发重新编译，一次执行就需要2秒），但某种操作能够瞬间造成大量文件改变（如 git checkout），这时一个简单的 debounce 可以使编译任务只执行一次。</p>
+<p>而方式 C 甚至可以和方式 B 组合使用，比如自动完成组件（Google 首页的搜索就是）：<br>当用户快速输入文本时（特别是打字能手），可以 throttle keypress 事件处理函数，以指定时间间隔来提取文本域的值，然后立即进行新的查询；<br>当新的查询需要发送，但上一个查询还没返回结果时，可以 abort 未完成的查询，并立即发送新查询；</p>
+<hr>
+<p>—– update 2013-01-08 —–</p>
+<h2 id="E-记忆型"><a href="#E-记忆型" class="headerlink" title="E. 记忆型"></a>E. 记忆型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scrape = memoize(<span class="function"><span class="keyword">function</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> $.post(<span class="string">'/scraper'</span>, &#123; <span class="string">'url'</span>: url &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>对于同样的参数，其返回始终结果是恒等的——每次都将返回同一对象。<br>应用例子有编辑器，如粘贴内容时抓取其中的链接信息，memoize 用以保证同样的链接不会抓取两次。</p>
+<hr>
+<p>—– update 2013-03-27 —–</p>
+<h2 id="F-累积型"><a href="#F-累积型" class="headerlink" title="F. 累积型"></a>F. 累积型</h2><p>前几天处理自动完成事件时得到这个函数，发现也可以用在处理连续事件上，它能够把连续的多次提交合并为一个提交，比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> request = makePile(<span class="number">5</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.post(<span class="string">'/'</span>, &#123; list: <span class="built_in">JSON</span>.stringify([].slice.call(<span class="built_in">arguments</span>)) &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连续发送五次</span></span><br><span class="line">request(&#123;a:<span class="number">1</span>&#125;), request(&#123;a:<span class="number">2</span>&#125;), request(&#123;a:<span class="number">3</span>&#125;), request(&#123;a:<span class="number">4</span>&#125;), request(&#123;a:<span class="number">5</span>&#125;)</span><br><span class="line"><span class="comment">/* post =&gt;</span><br><span class="line">list:[&#123;"a":1&#125;,&#123;"a":2&#125;,&#123;"a":3&#125;,&#123;"a":4&#125;,&#123;"a":5&#125;]</span><br><span class="line"> */</span></span><br><span class="line"><span class="comment">// 样例实现：</span></span><br><span class="line"><span class="keyword">var</span> makePile = <span class="function"><span class="keyword">function</span>(<span class="params">count, onfilter, onvalue</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> values = [], id = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123; <span class="keyword">return</span> value &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">    values.push((onvalue || id).apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>))</span><br><span class="line">    <span class="keyword">if</span> (values.length === count) &#123;</span><br><span class="line">      onfilter.apply(<span class="keyword">this</span>, values)</span><br><span class="line">      values = []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>—– update 2013-04-16 —–<br>另一种累积是按时间而不是次数，比如应用在行为统计上，可能在瞬间收集到数十上百类似的行为，这时可以用上面 pile 的结构加上 debounce 来防止大批重复请求（但又不丢失任何统计）：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> trackFactory = <span class="function"><span class="keyword">function</span>(<span class="params">delay, action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> params = [], slice = [].slice</span><br><span class="line">  <span class="keyword">var</span> touch = debounce(delay, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (params.length) &#123;</span><br><span class="line">      action(params)</span><br><span class="line">      params = []</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    params.push(slice.call(<span class="built_in">arguments</span>))</span><br><span class="line">    touch()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> track = trackFactory(<span class="number">550</span>, <span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// send tracking request</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="G-采样型"><a href="#G-采样型" class="headerlink" title="G. 采样型"></a>G. 采样型</h2><p>这是最近重构时联想到的，一种和上面都不同的去重操作，可以应用在自动加载（timeline）行为控制上：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">autoload.listen(feeds, <span class="string">'next'</span>, sample(<span class="number">3</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.enable()</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure></p>
+<p>如果 sample 是固化的选择函数（n 选 1），它这实际上会这样工作：<br>O-O-X-O-O-X</p>
+<p>但「自动加载」的应用可能想要的是（两次自动，一次手动）：<br>X-X-O-X-X-O</p>
+<p>对于这种情况，可以定义作为配置的选择函数来实现控制：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">options &#123; sample: (n) =&gt; n % 3 !== 0 &#125;</span><br></pre></td></tr></table></figure></p>
+<p>即每个下一次加载完成之后， 每三次有两次对下一次加载实行自动加载。</p>
+
+	
+	</div>
+  <a type="button" href="/2015/09/03/2015-9-how-to-prevent-repeating-send-ajax/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+    
+     <a href="/page/4/" type="button" class="btn btn-default"><i class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+      
+
+        <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+ 
+          <a type="button" class="btn btn-default disabled">下一页<i class="fa fa-arrow-circle-o-right"></i></a>
+        
+
+  
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+	<div class="widget">
+		<h4>标签云</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/reg/">reg<span>1</span></a></li>
+		
+			<li><a href="/tags/webpack/">webpack<span>1</span></a></li>
+		
+			<li><a href="/tags/html/">html<span>2</span></a></li>
+		
+			<li><a href="/tags/css/">css<span>5</span></a></li>
+		
+			<li><a href="/tags/vue/">vue<span>2</span></a></li>
+		
+			<li><a href="/tags/others/">others<span>4</span></a></li>
+		
+			<li><a href="/tags/gulp/">gulp<span>2</span></a></li>
+		
+			<li><a href="/tags/javascript/">javascript<span>19</span></a></li>
+		
+			<li><a href="/tags/react/">react<span>2</span></a></li>
+		
+			<li><a href="/tags/node/">node<span>2</span></a></li>
+		
+			<li><a href="/tags/jquery/">jquery<span>2</span></a></li>
+		
+			<li><a href="/tags/sass/">sass<span>1</span></a></li>
+		
+			<li><a href="/tags/es6/">es6<span>2</span></a></li>
+		
+			<li><a href="/tags/velocity/">velocity<span>1</span></a></li>
+		
+			<li><a href="/tags/svg/">svg<span>2</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>2</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>最新文章</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2016/06/05/2016-5-string-parse/" ><i class="fa fa-file-o"></i>字符串的转义</a>
+      </li>
+    
+      <li>
+        <a href="/2016/06/05/2016-6-layout/" ><i class="fa fa-file-o"></i>layout的妙用</a>
+      </li>
+    
+      <li>
+        <a href="/2016/06/03/2016-6-vue-extend-new/" ><i class="fa fa-file-o"></i>vue.extend 实例化</a>
+      </li>
+    
+      <li>
+        <a href="/2016/06/02/2016-6-velocty-tween/" ><i class="fa fa-file-o"></i>velocity 与 Tween</a>
+      </li>
+    
+      <li>
+        <a href="/2016/05/26/2016-5-height-of-html-document-window/" ><i class="fa fa-file-o"></i>网页中的window,html,document,bo...</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>链接</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/galenjiang" title="galenjiang's Github repository." target="_blank"]);">galenjiang</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2016 galenjiang
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>

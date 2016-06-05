@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>svg SNAP框架 | Home</title>
+  <meta name="author" content="galenjiang">
+  
+  <meta name="description" content="深入学习Snap
+var svg = Snap(&amp;quot;#el&amp;quot;)
+
+大写 绝对路径小写 相对路径
+
+paper 属性var paper = svg.paper
+
+el 方法
+
+paper.el(&amp;quot;type&amp;quot;, {props...})
+
+g&amp;amp;group 方法">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="svg SNAP框架"/>
+  <meta property="og:site_name" content="Home"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Home</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> svg SNAP框架</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="深入学习Snap"><a href="#深入学习Snap" class="headerlink" title="深入学习Snap"></a>深入学习Snap</h1><hr>
+<pre><code>var svg = Snap(&quot;#el&quot;)
+</code></pre><blockquote>
+<p>大写 绝对路径<br>小写 相对路径</p>
+</blockquote>
+<h3 id="paper-属性"><a href="#paper-属性" class="headerlink" title="paper 属性"></a>paper 属性</h3><pre><code>var paper = svg.paper
+</code></pre><ul>
+<li>el 方法</li>
+</ul>
+<pre><code>paper.el(&quot;type&quot;, {props...})
+</code></pre><ul>
+<li>g&amp;group 方法</li>
+</ul>
+<pre><code>paper.g(el1, el2)
+paper.g().add(el1, el2)
+paper.group()
+</code></pre><ul>
+<li>el 方法</li>
+</ul>
+<pre><code>paper.circle(cx, cy, r)
+</code></pre><ul>
+<li>ellipse 方法</li>
+</ul>
+<pre><code>paper.ellipse(cx, cy, rx, ry)
+</code></pre><ul>
+<li>filter 方法</li>
+</ul>
+<pre><code>var gs = paper.filter (&apos;&lt;feGaussianBlur stdDeviation=&quot;2&quot;/&gt;&apos;)
+
+el.attr({filter: gs})
+</code></pre><ul>
+<li>gradient 方法</li>
+</ul>
+<pre><code>var g1 = svg.paper.gradient(&quot;l(0, 0, 1, 1)#000-#f00:25-#fff&quot;);
+svg.paper.circle(50, 50, 40).attr({fill: g1});
+</code></pre><blockquote>
+<p>绝对路径</p>
+</blockquote>
+<pre><code>svg.paper.gradient(&quot;L(0, 0, 1, 1)#000-#f00:25-#fff&quot;);
+</code></pre><blockquote>
+<p>编译为<br>![1450755763709.jpg][0]</p>
+<p>辐射</p>
+</blockquote>
+<pre><code>svg.paper.gradient(&quot;r(0, 0, 1, 1)#000-#f00:25-#fff&quot;);
+</code></pre><ul>
+<li>image 方法</li>
+</ul>
+<pre><code>paper.image(&quot;src&quot;, x, y, width, height)
+</code></pre><ul>
+<li>line 方法</li>
+</ul>
+<pre><code>paper.line(x, y, x, y)
+</code></pre><ul>
+<li>path 方法</li>
+</ul>
+<pre><code>paper.path(M50 50 L100 50)
+</code></pre><ul>
+<li>polyline&amp;polygon 方法</li>
+</ul>
+<pre><code>paper.polyline(x1, y1, x2, y2)
+
+paper.polyline([ x1, y1, x2, y2 ])
+
+ paper.polygon(x1, y1, x2, y2)
+
+paper.polygon([ x1, y1, x2, y2 ])
+</code></pre><ul>
+<li>rect 方法</li>
+</ul>
+<pre><code>paper.rect(x1, y1, x2, y2, rx, ry)
+</code></pre><ul>
+<li>text方法</li>
+</ul>
+<pre><code>paper.text(x, y, &quot;text&quot;)
+
+paper.text(x, y, [&quot;t&quot;],[&quot;e&quot;],[&quot;x&quot;],[&quot;t&quot;])
+</code></pre><ul>
+<li>toString 方法</li>
+</ul>
+<pre><code>paper.toString()
+</code></pre><h3 id="element-属性"><a href="#element-属性" class="headerlink" title="element 属性"></a>element 属性</h3><hr>
+<ul>
+<li>选取元素</li>
+</ul>
+<pre><code>el.select()
+
+el.selectAll()
+
+el.parent()
+</code></pre><ul>
+<li>操作DOM</li>
+</ul>
+<pre><code>el.clone()
+
+el1.after(el2) el2 排在el1后面
+
+el1.before(el2) el2 排在el1前面
+
+el1.append(el2) el2 插到el1里面最后面
+
+el1.prepend(el2) el2 插到里面最前面
+
+el.remove()
+
+el.toDefs()
+
+Snap.parse(string)字符串转化为svg对象，可供append
+
+el.data()
+
+el.removeData()
+
+el.toString() 转变为字符串
+
+el.transform() 转变为对象
+</code></pre><ul>
+<li>标签</li>
+</ul>
+<pre><code>el.use() 创建use标签，链接到对象
+
+el.pattern()
+
+el.marker(viewBoxX1, viewBoxY1, viewBoxX2, viewBoxY2,refX,refY )
+</code></pre><ul>
+<li>获取属性</li>
+</ul>
+<pre><code>el.adPX(attr)已px值返回属性值
+
+el.attr({})
+
+el.getBBox()返回元素边界框描述
+</code></pre><ul>
+<li>高级操作</li>
+</ul>
+<pre><code>el.getPointAtLength(lenght) 返回截取长度的点坐标
+
+el.getSubpath(start, end) 返回截取的子路径
+
+el.getTotalLength()返回元素的长度
+</code></pre><ul>
+<li>事件</li>
+</ul>
+<blockquote>
+<p>click dbclick hover mousedown mousemove mouseout mouseover<br>mouseup mousemove<br>touchcancel touchend touchmove touchstart<br>unclick undbclick undrag unhover unmousedown unmousemove<br>unmouseout unmouseover unmouseup untouchcancel untouchend untouchmove untouchstart</p>
+</blockquote>
+<h3 id="fragment-属性"><a href="#fragment-属性" class="headerlink" title="fragment 属性"></a>fragment 属性</h3><h3 id="set-属性"><a href="#set-属性" class="headerlink" title="set 属性"></a>set 属性</h3><pre><code>var set = svg.select(&quot;circle&quot;)
+
+
+set.clear()
+
+set.exclude(el)
+
+set.forEach(function(element, index){})
+
+set.push()
+
+set.pop()
+
+set.splice()
+</code></pre><h3 id="Snap-属性"><a href="#Snap-属性" class="headerlink" title="Snap 属性"></a>Snap 属性</h3><pre><code>var svg = Snap(x, y)
+
+new Snap.Matrix()
+
+Snap.ajax()
+
+Snap.load()
+
+Snap.angle(x1, y1, x2, y2)2个点，和3个点。没有懂
+
+Snap.rad(deg) 角度转换为弧度
+</code></pre><ul>
+<li>颜色</li>
+</ul>
+<pre><code>Snap.color(&quot;#123456&quot;)
+
+Snap.getRGB(&quot;red&quot;)
+
+Snap.rgb(255, 255, 255)
+
+Snap.hsb()
+
+Snap.hsb2rgb()
+
+Snap.rgb2hsb()
+
+Snap.hsl()
+
+Snap.hsl2rgb()
+
+Snap.rgb2hsl()
+
+Snap.deg(Math.PI)
+</code></pre><ul>
+<li>滤镜</li>
+</ul>
+<pre><code>方法1：
+
+svg.paper.filter(Snap.filter.blur())
+
+方法2：
+
+svg.paper.filter(&apos;&lt;feGaussianBlur stdDeviation=&quot;2&quot;/&gt;&apos;)
+</code></pre><blockquote>
+<p>滤镜种类：</p>
+</blockquote>
+<pre><code>blur brightness constrast grayscale bueRotate?? invert saturate sepia shadow
+</code></pre><ul>
+<li>根据字符串创建svg</li>
+</ul>
+<pre><code>Snap.format() 模板拼接字符串
+
+Snap.fragment() 字符串生成svg
+
+Snap.parsePathString(&quot;M10 10&quot;)路径字符串转变为路径数组
+
+Snap.parseTransformString(TString)变换字符串转变为数组
+</code></pre><ul>
+<li>获取元素</li>
+</ul>
+<pre><code>Snap.getElementByPoint()根据坐标来获取元素
+</code></pre><ul>
+<li>判断类型</li>
+</ul>
+<pre><code>snap.is(??, type)
+</code></pre><h1 id="Snap-path-属性"><a href="#Snap-path-属性" class="headerlink" title="Snap.path 属性"></a>Snap.path 属性</h1><ul>
+<li>bezierBBox方法</li>
+</ul>
+<pre><code>返回贝塞尔曲线盒子 {width: ??, height: ??, x: ??, y: ??, x2: ??, y2: ??}
+path.bezierBBox(x1, y1, x2, y2, x3, y3, x4, y4)
+</code></pre><ul>
+<li>findDotsAtSegment 方法</li>
+</ul>
+<pre><code>返回贝塞尔曲线参数位置点坐标  参数：0 &lt; t &lt; 1  返回t位置的点坐标
+Snap.path.findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t)
+</code></pre><ul>
+<li>Snap.path.getBBox 方法</li>
+</ul>
+<pre><code>返回边界盒子：高度，宽度，开始一点，最后一点的坐标
+Snap.path.getBBox(&quot;M10,10L90,90&quot;);
+</code></pre><ul>
+<li>getPointAtLength 方法</li>
+</ul>
+<pre><code>同findDotsAtSegment
+Snap.path.getPointAtLength(path, length)
+</code></pre><ul>
+<li>getSubpath 方法</li>
+</ul>
+<pre><code>返回子路径字符串    path为路径字符串 from to 为像素长度
+Snap.path.getSubpath(path, from, to)
+</code></pre><ul>
+<li><p>getTotalLength 方法</p>
+<p>  返回路径长度<br>  Snap.path.getTotalLength(path)</p>
+</li>
+</ul>
+<ul>
+<li>intersection 方法</li>
+</ul>
+<pre><code>判断两条路径是否交叉 返回坐标点参数 x y 坐标  t1 t2百分比
+Snap.path.intersection(path1, path2)
+</code></pre><ul>
+<li>isBBoxIntersect 方法</li>
+</ul>
+<pre><code>判断盒子相交返回true
+Snap.path.isBBoxIntersect(bbox1, bbox2)
+</code></pre><ul>
+<li>isPointInsideBBox 方法</li>
+</ul>
+<pre><code>给定点是否在盒子内部
+Snap.path.isPointInsideBBox(bbox, x, y)
+</code></pre><ul>
+<li>map 方法</li>
+</ul>
+<pre><code>返回路径matrix变换后的路径字符串
+var path = &apos;M10,10L90,90&apos;, matrix = new Snap.Matrix(1,0,0,1,10,10);
+var pathTransform = Snap.path.map(path, matrix);
+if (window.console) {
+    console.log(pathTransform);    // 结果是：[Array[3], Array[7], toString: function]
+    console.log(pathTransform.toString());    // 结果是：M20,20C20,20,100,100,100,100
+}
+</code></pre><ul>
+<li>toAbsolute 方法</li>
+</ul>
+<pre><code>转换路径坐标为绝对值
+var path = &quot;M10,10L90,90&quot;;
+var absolute = Snap.path.toAbsolute(path);
+console.log(absolute);    // [Array[3], Array[3], toString: function]
+console.log(absolute.toString());    // &quot;M10,10L90,90&quot;
+</code></pre><ul>
+<li>toAbsolute 方法</li>
+</ul>
+<pre><code>转化路径为贝塞尔曲线字符串，绝对路径？！
+var pathString = &quot;m32,118c0,0 21,-100 78,-94c57,6 -78,94 -78,94z&quot;;
+var cubic = Snap.path.toCubic(pathString);
+console.log(cubic.toString());
+// 结果是：
+// M32,118C32,118,53,18,110,24C167,30,32
+18,32,118C32,118,32,118,32,118
+</code></pre><ul>
+<li>toRelative 方法</li>
+</ul>
+<pre><code>转换路径坐标为相对路径
+var path = &quot;M10,10L90,90&quot;;
+var relative = Snap.path.toRelative(path);
+console.log(relative);    // Array[2]
+console.log(relative.toString());    &quot;M10,10l80,80&quot;
+</code></pre><ul>
+<li>plugin 方法</li>
+</ul>
+<pre><code>扩展插件
+Snap.plugin(function (Snap, Element, Paper, global) {
+    Snap.newmethod = function () {};
+    Element.prototype.newmethod = function () {};
+    Paper.prototype.newmethod = function () {};
+});
+</code></pre><ul>
+<li>select 方法</li>
+</ul>
+<pre><code>Snap.select(query)
+同 Snap(&quot;#svg&quot;).select(query)
+</code></pre><ul>
+<li>selectAll 方法</li>
+</ul>
+<pre><code>Snap.selectAll(query)
+同 Snap(&quot;#svg&quot;).selectAll(query)
+</code></pre><ul>
+<li>snapTo 方法</li>
+</ul>
+<pre><code>逐帧 一帧跳一帧
+Snap.snapTo(values, value, [tolerance])
+</code></pre><h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><pre><code>方法1：Snap.animate(0, 20, function (val) {
+            rect.attr({
+                x: val
+            });
+        }, 1000);
+
+方法2：rect.animate({x: 20}, 1000);
+</code></pre><ul>
+<li>停止</li>
+</ul>
+<pre><code>el.animate({},time, effect, function(){})
+
+el.stop()
+</code></pre><h3 id="mina"><a href="#mina" class="headerlink" title="mina"></a>mina</h3><pre><code>mina(a, A, b, B, get, set, [easing])
+
+var c = Snap(&quot;#svg&quot;).paper.circle(50,50,40).attr({ fill: &quot;red&quot; });
+document.getElementById(&quot;button&quot;).onclick = function() {
+var now = mina.time();
+var ani = mina(50, 150, now, now + 1000, mina.time, function(val) {
+    c.attr({
+        cx: val
+    });
+}, mina.easeout);
+console.dir(ani);
+</code></pre><p>};</p>
+<ul>
+<li><p>mina.time()</p>
+<blockquote>
+<p>获取时间戳</p>
+</blockquote>
+</li>
+<li><p>mina.backin(n)</p>
+</li>
+<li><p>mina.backout(n)</p>
+</li>
+<li><p>mina.bounce(n)</p>
+</li>
+<li><p>mina.easein(n)</p>
+</li>
+<li><p>mina.easeinout(n)</p>
+</li>
+<li><p>mina.easeout(n)</p>
+</li>
+<li><p>mina.elastic(n)</p>
+</li>
+<li><p>mina.linear(n)</p>
+</li>
+</ul>
+<blockquote>
+<p>动画效果</p>
+</blockquote>
+<ul>
+<li>mina.getById(id)</li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2015/09/08/2015-9-svg-snap-matrix/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> 上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2015/09/08/2015-9-flex-box/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2015-09-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/svg/">svg<span>2</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2016 galenjiang
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
